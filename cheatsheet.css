@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Pacifico&display=swap');
+
+textarea {
+    resize: none;
+  }
+
+h1,p {
+    font-family: 'Francois One', sans-serif;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+span {
+    font-size: 40px;
+}
+
+.a .b {
+    color: blue;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    border: 2px solid black;
+    height: 50px;
+    width: 300px;
+    background-color: #ffe3c7;
+}
+
+td {
+    border: 2px solid black;
+    height: 100px;
+    width: 300px;
+}
+
+td.text {
+    text-align: center;
+}
+
+.blue {
+    color: blue;
+}
+
+.notblue {
+    color: red;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.allbg {
+    background: linear-gradient(180deg, rgba(246,246,246,1) 0%, rgba(255,221,221,1) 95%, rgba(255,199,199,1) 98%);
+}
+
+.headerbg {
+    background: linear-gradient(180deg, rgba(246,246,246,1) 5%, rgba(255,227,199,1) 50%, rgba(246,246,246,1) 95%);
+    margin: 0;
+}

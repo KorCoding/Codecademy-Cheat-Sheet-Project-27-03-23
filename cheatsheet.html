@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cheat Sheet</title>
+    <link rel="stylesheet", href="cheatsheet.css" >
+</head>
+<body class="allbg">
+    <div class="headerbg">
+    
+        <h1> Combining CSS SELECTOR </h1>
+
+    </div>
+
+    <main>
+        <div>
+            <p>
+                Name: <span>Descendant Combinator</span> <br>
+                Description: Matches any B element that is a descendant (inside) of an A element.
+            </p>
+
+            <table>
+                <tr>
+                    <th>Pattern</th>
+                    <th>Code Example</th>
+                    <th>Match</th>
+                    <th>Not Match</th>
+                </tr>
+                
+                <tr>
+                    <td class="text">A B</td>
+                    <td class="text">h2 p { color: blue; }</td>
+                    <td>
+                        <pre>
+    &lt;h2&gt;
+        &lt;p&gt; Blue &lt;/p&gt;
+        &lt;div&gt;
+            &lt;p&gt; Still Blue &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/h2&gt;
+                        </pre>
+                    </td>
+
+                    <td>
+                        <pre>
+    &lt;h2&gt; &lt;/h2&gt;
+    &lt;p&gt; Not Blue &lt;/p&gt;
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <p>
+                Name: <span>Child Combinator</span><br>
+                Description: Matches any B element that is a child of A ( Not Grandchilds).
+            </p>
+
+            <table>
+                <tr>
+                    <th>Pattern</th>
+                    <th>Code Example</th>
+                    <th>Match</th>
+                    <th>Not Match</th>
+                </tr>
+                
+                <tr>
+                    <td class="text">A > B</td>
+                    <td class="text">h2 > p { color: blue; } </td>
+                    <td>
+                        <pre>
+    &lt;h2&gt;
+        &lt;p&gt; Blue &lt;/p&gt;
+    &lt;/h2&gt;
+                        </pre>
+                    </td>
+
+                    <td>
+                        <pre>
+    &lt;h2&gt;
+        &lt;div&gt;
+            &lt;p&gt; Not Blue &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/h2&gt;
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <p>
+                Name: <span>Next sibling combinator</span><br>
+                Description: Matches if A and B share the same parent and A immediately precedes B.
+            </p>
+
+            <table>
+                <tr>
+                    <th>Pattern</th>
+                    <th>Code Example</th>
+                    <th>Match</th>
+                    <th>Not Match</th>
+                </tr>
+                
+                <tr>
+                    <td class="text">A + B</td>
+                    <td class="text">h2 + p { color: blue; }</td>
+                    <td>
+                        <pre>
+    &lt;h2&gt; &lt;/h2&gt;
+    &lt;p&gt; Blue &lt;/p&gt;
+                        </pre>
+                    </td>
+
+                    <td>
+                        <pre>
+    &lt;h2&gt; &lt;/h2&gt;
+    &lt;h3&gt; &lt;/h3&gt;
+    &lt;p&gt; Not Blue &lt;/p&gt;
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <p>
+                Name: <span>Compounding multiple class or ID selectors</span><br>
+                Description: Matches if A and B or more in the same tag. (Can be id,class,type)
+            </p>
+
+            <table>
+                <tr>
+                    <th>Pattern</th>
+                    <th>Code Example</th>
+                    <th>Match</th>
+                    <th>Not Match</th>
+                </tr>
+                
+                <tr>
+                    <td class="text">.class1.class2(.classN)</td>
+                    <td class="text">.a.b { color: blue; }</td>
+                    <td>
+                        <pre>
+    &lt;div class="a b"&gt;
+        &lt;p&gt; Blue &lt;/p&gt;
+    &lt;/div&gt;
+                        </pre>
+                    </td>
+
+                    <td>
+                        <pre>
+    &lt;div class="a"&gt;
+        &lt;p class="a" &gt; Not Blue &lt;/p&gt;
+    &lt;/div&gt;
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div> 
+            <p>
+                Name: <span>Following Sibling Combinator</span><br>
+                Description: Matches when an B element is preceded by an A element (not necessarily immediately, as in case of A > B).
+            </p>
+
+            <table>
+                <tr>
+                    <th>Pattern</th>
+                    <th>Code Example</th>
+                    <th>Match</th>
+                    <th>Not Match</th>
+                </tr>
+                
+                <tr>
+                    <td class="text">A ~ B</td>
+                    <td class="text">h2 ~ p { color: blue; }</td>
+                    <td>
+                        <pre>
+    &lt;h2&gt; &lt;/h2&gt;
+    &lt;h3&gt; &lt;/h3&gt;
+    &lt;p&gt; Blue &lt;/p&gt;
+                        </pre>
+                    </td>
+
+                    <td>
+                        <pre>
+    &lt;h2&gt;
+        &lt;p&gt; Not Blue &lt;/p&gt;
+   &lt;/h2&gt;
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </main>
+
+    <footer>
+        <a href="http://galjot.si/combining-css-selectors#descendant-combinator" target="_blank" > Thank for This source </a>
+    </footer>
+
+</body>
+</html>
